@@ -34,7 +34,7 @@ static inline void gpio_init_out(volatile Ifx_P *port, int pin)
     iocr += (pin /4);
 
     *iocr = (*iocr & ~(0xFFu << ((pin % 4) * 8)))
-          | (0x10u << ((pin % 4) *8));
+          | (0x80u << ((pin % 4) *8));
 }
 
 static inline void gpio_write(volatile Ifx_P *port, int pin, int level)

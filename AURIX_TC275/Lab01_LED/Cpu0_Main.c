@@ -27,7 +27,7 @@
 #include "Ifx_Types.h"
 #include "IfxCpu.h"
 #include "IfxScuWdt.h"
-#include "IFxPort_reg.h"
+#include "IfxPort_reg.h"
 
 IfxCpu_syncEvent cpuSyncEvent = 0;
 

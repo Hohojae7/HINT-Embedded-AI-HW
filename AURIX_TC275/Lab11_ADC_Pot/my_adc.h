@@ -19,7 +19,7 @@
 
 #define LM35_MC_PER_LSB      122
 
-void adc_int(void);
+void adc_init(void);
 uint16 adc_read_once(uint8 ch);
 void adc_start_tick_stream(void);
 
