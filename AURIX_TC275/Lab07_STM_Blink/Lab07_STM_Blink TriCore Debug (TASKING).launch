@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.rt.hightec.agent.launcher.launchConfigurationType">
+    <stringAttribute key="ACC_HW" value="DAS JTAG SHIELDBUDDY TC275 464E5HM2"/>
+    <stringAttribute key="ADDITIONAL_AGENT_OPTIONS" value=""/>
+    <booleanAttribute key="ENABLE_AGENTLOG" value="false"/>
+    <booleanAttribute key="ENABLE_FLASHING" value="true"/>
+    <booleanAttribute key="ENABLE_STOPPING" value="true"/>
+    <stringAttribute key="EXECUTABLE_PATH" value="${workspace_loc}/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf"/>
+    <stringAttribute key="PPU_ELF_PATH" value=""/>
+    <stringAttribute key="STOP_FUNCTION" value="core0_main"/>
+    <stringAttribute key="SVD" value="C:/Infineon/AURIX-Studio-1.10.36/build_system/bundled-artefacts-repo/svd/tc27xdpd/1.2-3/device.svd"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="Lab07_STM_Blink"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/Lab07_STM_Blink"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="4"/>
+    </listAttribute>
+    <stringAttribute key="org.eclipse.debug.ui.ATTR_LOCATION" value="/Lab07_STM_Blink/Lab07_STM_Blink TriCore Debug (TASKING).launch"/>
+    <stringAttribute key="org.eclipse.debug.ui.ATTR_PROJECT_NAME" value="Lab07_STM_Blink"/>
+    <booleanAttribute key="org.eclipse.debug.ui.ATTR_SHARED" value="true"/>
+    <stringAttribute key="org.eclipse.tcf.debug.MemoryMap" value="[{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;f36c9e70-ce73-4373-a583-13785fd85410&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;a8cad9e1-00a0-4cbd-aba6-9cf4eff5f5dc&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;9b225de7-bac7-4eb2-bfe6-a5f52161eb10&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;794e1fc0-5f90-419d-8540-887b9730ed63&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;140d14a9-b41f-4013-bce8-cb821cc1c21d&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;be8bf411-a569-49b1-ada4-f61916e429a5&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;2509798a-ac89-428c-9cdc-c80e952a2494&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;a6f71dfa-6c69-43ae-939a-085709eeddc4&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 1: CPU1 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;79decbe5-57eb-4cff-b606-99cc76d87ad8&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;d7516bf0-d510-478b-a21c-4858dc47bc0f&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;e91cac82-57e8-4be7-ba38-3a2d39be757a&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 1: CPU1 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;f4bae817-73cd-43e8-a0a4-8591875620cd&quot;}]"/>
+    <stringAttribute key="org.eclipse.tcf.debug.PeerID" value="TCP:127.0.0.1:1534"/>
+    <stringAttribute key="org.eclipse.tcf.debug.ProjectName" value="Lab07_STM_Blink"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.RunLocalAgent" value="false"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.RunLocalServer" value="false"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.UseLocalAgent" value="false"/>
+    <stringAttribute key="org.eclipse.tcf.debug.executable_name" value="${workspace_loc}/Lab07_STM_Blink/TriCore Debug (TASKING)/Lab07_STM_Blink.elf"/>
+    <stringAttribute key="sessionID" value="79691e0f-c390-4e26-98dd-65ba7b8b22d7"/>
+</launchConfiguration>

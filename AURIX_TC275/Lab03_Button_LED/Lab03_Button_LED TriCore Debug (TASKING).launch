@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.rt.hightec.agent.launcher.launchConfigurationType">
+    <stringAttribute key="ACC_HW" value="DAS JTAG SHIELDBUDDY TC275 464E5HM2"/>
+    <stringAttribute key="ADDITIONAL_AGENT_OPTIONS" value=""/>
+    <booleanAttribute key="ENABLE_AGENTLOG" value="false"/>
+    <booleanAttribute key="ENABLE_FLASHING" value="true"/>
+    <booleanAttribute key="ENABLE_STOPPING" value="true"/>
+    <stringAttribute key="EXECUTABLE_PATH" value="${workspace_loc}/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf"/>
+    <stringAttribute key="PPU_ELF_PATH" value=""/>
+    <stringAttribute key="STOP_FUNCTION" value="core0_main"/>
+    <stringAttribute key="SVD" value="C:/Infineon/AURIX-Studio-1.10.36/build_system/bundled-artefacts-repo/svd/tc27xdpd/1.2-3/device.svd"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="Lab03_Button_LED"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/Lab03_Button_LED"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="4"/>
+    </listAttribute>
+    <stringAttribute key="org.eclipse.debug.ui.ATTR_LOCATION" value="/Lab03_Button_LED/Lab03_Button_LED TriCore Debug (TASKING).launch"/>
+    <stringAttribute key="org.eclipse.debug.ui.ATTR_PROJECT_NAME" value="Lab03_Button_LED"/>
+    <booleanAttribute key="org.eclipse.debug.ui.ATTR_SHARED" value="true"/>
+    <stringAttribute key="org.eclipse.tcf.debug.MemoryMap" value="[{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;179ce47c-1246-4948-92e6-9cb1e8db130c&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;2881e412-144b-481e-8734-3398918969bc&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;596279f0-7852-469b-a401-e8865bde4411&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;2e0a3909-682e-4fb3-98e1-8840feb55cff&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;d35b584e-5600-436b-b773-1ebcb8dd5ab2&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;5931a984-2f5a-49dc-bfb5-336145b3990b&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;416aaee8-8810-4871-b3a8-d88955864e9c&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;f2e397d7-ade2-4a56-8303-332e97f95180&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 1: CPU1 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;7539b46e-6669-4e53-990e-92d7119974ec&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 2: CPU2 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;3744e14b-cd8d-4bc9-b240-b653f6020190&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;b7b3a1d6-06f3-4cf1-adf6-4ca53aee6881&quot;},{&quot;FileName&quot;:&quot;C:/Users/User/AURIX-v1.10.36-workspace/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf&quot;,&quot;ID&quot;:&quot;/DAS JTAG SHIELDBUDDY TC275 464E5HM2/Core 1: CPU1 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;3510d4b4-d669-4bd7-90a4-d777361e21ef&quot;}]"/>
+    <stringAttribute key="org.eclipse.tcf.debug.PeerID" value="TCP:127.0.0.1:1534"/>
+    <stringAttribute key="org.eclipse.tcf.debug.ProjectName" value="Lab03_Button_LED"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.RunLocalAgent" value="false"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.RunLocalServer" value="false"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.UseLocalAgent" value="false"/>
+    <stringAttribute key="org.eclipse.tcf.debug.executable_name" value="${workspace_loc}/Lab03_Button_LED/TriCore Debug (TASKING)/Lab03_Button_LED.elf"/>
+    <stringAttribute key="sessionID" value="a17dce29-5b61-476b-be7e-129cf954d6f8"/>
+</launchConfiguration>
