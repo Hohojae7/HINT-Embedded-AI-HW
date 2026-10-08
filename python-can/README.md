@@ -32,7 +32,7 @@ HINT 교육과정 자동차 통신 시스템 강의의 python-can 실습 코드�
 > Kvaser 0번 채널에 1 Mbps로 접속해서, ID가 0x123인 8바이트 메시지를 0.1초 안에 보내는 코드입니다.
 >
 > - `can.Bus(...)` : CAN 버스에 접속하는 객체
-> - `interface='kvaser'` : 사용할 CAN 장비의 드라이버.
+> - `interface='kvaser'` : 사용할 CAN 장비의 드라이버
 > - `channel=0` : 장비 안의 채널(포트) 번호
 > - `bitrate=1000000` : 통신 속도 1 Mbps(초당 100만 비트)로, Classic CAN의 최고 속도. 같은 버스에 있는 노드는 모두 같은 값을 써야 통신됨
 > - `can.Message(...)` : 버스로 보낼 CAN 메시지(프레임) 하나
