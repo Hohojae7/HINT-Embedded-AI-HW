@@ -1,6 +1,6 @@
-# AUTOSAR CAN — 승객 감지·난방 제어
+# AUTOSAR CAN — 승객 감지·열선시트 제어
 
-IoHwAb 실습에 CAN 승객 감지 신호를 추가한 실습입니다. 수신한 값을 SeatSwitch에서 승객 상태로 전달하고, SHControl이 난방을 허용하거나 정지하도록 연결했습니다.
+IoHwAb 실습에 CAN 승객 감지 신호를 추가한 실습입니다. 수신한 값을 SeatSwitch에서 승객 상태로 전달하고, SHControl이 열선시트 동작을 허용하거나 정지하도록 연결했습니다.
 
 ## CAN 구성
 
@@ -21,12 +21,11 @@ CAN RX → COM·RTE → SeatSwitch → PassengerDetected → SHControl → PWM
                       └─ 수신 값 → CAN 상태 송신
 ```
 
-`0x004`는 `Re_SeatSwitch()`에서 수신 값을 `Rte_Write`로 갱신할 때 송신을 요청하며, 고정 주기 송신은 사용하지 않습니다.
-CAN 수신 Data Received Event로 `Re_SeatSwitch()`를 실행합니다. `Re_SHSwitch()`는 승객 상태를 읽고, 기존 다이얼 처리 Runnable은 이 상태에 따라 난방 단계 또는 0을 전달합니다. 두 수신 Event는 `OsTask_ASW_DRE`에 매핑되어 있습니다.
+`0x005`를 수신하면 Data Received Event로 `Re_SeatSwitch()`가 실행되고, 수신 값을 `Rte_Write`로 갱신하면서 `0x004` 송신을 요청합니다(고정 주기 송신 없음). `Re_SHSwitch()`는 승객 상태를 읽고, 기존 다이얼 처리 Runnable은 이 상태에 따라 열선시트 단계 또는 0을 전달합니다. 두 수신 Event는 `OsTask_ASW_DRE`에 매핑되어 있습니다.
 
 | `0x005` 첫 바이트 | LED1(PE4) | LED4(PE7) | LED2(PE5) |
 |---|---|---|---|
-| `0` | OFF | 난방 정지, Idle | Alive 표시 유지 |
+| `0` | OFF | 열선시트 정지, Idle | Alive 표시 유지 |
 | 0 이외 | ON | 다이얼 단계에 따라 PWM 변경 | Alive 표시 유지 |
 
 ## 이전 실습과 달라진 점
@@ -38,7 +37,7 @@ CAN 수신 Data Received Event로 `Re_SeatSwitch()`를 실행합니다. `Re_SHSw
 | 파일 | 역할 |
 |---|---|
 | [SeatSwitch.c](Static_Code/App_Code/SeatSwitch.c) | CAN 수신 값 읽기, 승객 상태·송신 신호 작성 |
-| [SHControl.c](Static_Code/App_Code/SHControl.c) | 승객 상태 수신과 난방 허용 판단 |
+| [SHControl.c](Static_Code/App_Code/SHControl.c) | 승객 상태 수신과 열선시트 동작 판단 |
 | [App_SeatHeating.arxml](Configuration/System/Swcd_App/App_SeatHeating.arxml) | 추가 SWC·포트·수신 Event |
 | [Project.arxml](Configuration/System/DBImport/Project.arxml) | 실습 CAN 프레임·신호 Import 모델 |
 | [Ecud_Com.arxml](Configuration/ECU/Ecud_Com.arxml) | COM 신호 설정 |

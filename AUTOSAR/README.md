@@ -54,8 +54,8 @@ flowchart TB
 
 | No | 폴더 | 내용 | 핵심 개념 |
 |---|---|---|---|
-| 06 | [IoHwAb](06_IoHwAb) | 다이얼 입력으로 난방 단계와 LED 밝기 제어 | ADC·DIO·PWM, IO 추상화 |
-| 07 | [CAN](07_CAN) | CAN 승객 감지 신호를 난방 제어에 연결 | DBC Import, COM 신호 |
+| 06 | [IoHwAb](06_IoHwAb) | 다이얼 입력으로 열선시트 단계와 LED 밝기 제어 | ADC·DIO·PWM, IO 추상화 |
+| 07 | [CAN](07_CAN) | CAN 승객 감지 신호를 열선시트 제어에 연결 | DBC Import, COM 신호 |
 | 08 | [MEMORY](08_MEMORY) | NvM 블록의 읽기·쓰기와 완료 통지 연결 | NvM 서비스, 비동기 처리 |
 | 09 | [Application](09_Application) | TORCS CAN 신호를 CC·LKAS SWC에 연결 | SWC 구성, ECU 통합 |
 

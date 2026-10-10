@@ -26,8 +26,7 @@ Task는 `GblLedInit`가 참일 때 LED2 출력을 바꾸고 `TerminateTask()`로
 
 ## 이전 실습과 달라진 점
 
-01과 `App_Os.c`는 동일합니다. 이 단계에서 달라지는 핵심은 `Ecud_Os.arxml`의 주기 Task·Alarm 등록과 OS-Application 연결입니다.
-`OsTask_Test_1s`와 `OsAlarm_Test_1s`를 `OsApplication0`에 등록해, 두 OS 객체의 소유와 접근 권한을 관리하는 OS-Application을 지정합니다.
+`App_Os.c`는 01과 같습니다. `Ecud_Os.arxml`에 주기 Task와 Alarm을 추가하고, 두 객체를 `OsApplication0`에 등록했습니다. OS-Application은 OS 객체의 소유와 접근 권한을 관리하는 단위입니다.
 
 ## 주요 파일
 

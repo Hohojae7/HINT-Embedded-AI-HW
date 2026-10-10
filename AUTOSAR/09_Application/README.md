@@ -2,6 +2,12 @@
 
 TORCS의 CAN 신호를 CC·LKAS SWC에 연결하는 실습입니다. 제공된 제어 예제를 바탕으로 SWC·포트·Event를 구성하고, ECU의 RTE·OS Task·COM 설정과 통합했습니다.
 
+```text
+TORCS (PC, 제공 runtime) ↔ PCAN-USB ↔ TRK-MPC5606B   CAN 500 kbit/s
+```
+
+TORCS 폴더에 제공 runtime을 설치하고, PCAN을 연결한 뒤 `execute.bat`를 관리자 권한으로 실행합니다.
+
 ## SWC 구성
 
 | SWC | Runnable 함수 | 주기 | 입력 | 출력 |
@@ -13,8 +19,7 @@ TORCS의 CAN 신호를 CC·LKAS SWC에 연결하는 실습입니다. 제공된 �
 
 ## CAN 신호 구성
 
-`TORCS(제공 runtime) ↔ PCAN-USB ↔ TRK-MPC5606B`로 연결하며, CAN 통신 속도는 500 kbit/s입니다.
-TORCS 폴더에 제공 runtime을 설치하고 PCAN 연결 후 `execute.bat`를 관리자 권한으로 실행합니다. 아래 표는 ECU 기준 수신·송신 방향입니다.
+송수신 방향은 ECU 기준입니다.
 
 | 프레임 | CAN ID | 방향 | 주요 신호 |
 |---|---|---|---|
@@ -30,8 +35,14 @@ TORCS 폴더에 제공 runtime을 설치하고 PCAN 연결 후 `execute.bat`를 
 TORCS CAN 입력 → COM·RTE → CC / LKAS Runnable → RTE·COM → TORCS CAN 출력
 ```
 
-- **CC**: `CC_TRIGGER > 5000`일 때 입력 가속값을 기준으로, `SPEED*100 - TARGET_SPEED < -TARGET_SPEED*100`이면 +500, 그 외 `SPEED*100 > TARGET_SPEED`이면 −1000을 보정합니다.
-  비활성 시 `ACCEL=0`이며, 제공 코드의 `BRAKE` 출력은 항상 0입니다.
+- **CC**: `CC_TRIGGER > 5000`이면 입력 가속값(`ACCEL_VALUE`)에 속도 조건에 따른 보정을 더해 `ACCEL`로 출력하고, 비활성이면 `ACCEL = 0`입니다. 제공 코드의 `BRAKE`는 항상 0입니다.
+
+  ```c
+  ACCEL = ACCEL_VALUE;
+  if (SPEED * 100 - TARGET_SPEED < -TARGET_SPEED * 100)  ACCEL += 500;
+  else if (SPEED * 100 > TARGET_SPEED)                   ACCEL -= 1000;
+  ```
+
 - **LKAS**: 활성 트리거와 조향 입력의 부호에 따라 좌·우 출력값을 정하고, 출력 크기를 최대 10000으로 제한합니다.
 
 이 실습은 제공 제어 코드와 AUTOSAR 구성의 연결을 다룹니다.
