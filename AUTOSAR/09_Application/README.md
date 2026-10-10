@@ -45,4 +45,4 @@ TORCS CAN 입력 → COM·RTE → CC / LKAS Runnable → RTE·COM → TORCS CAN 
 | [Ecud_Rte.arxml](Configuration/ECU/Ecud_Rte.arxml) | Event–Task 매핑 |
 | [Project.arxml](Configuration/System/DBImport/Project.arxml) | TORCS CAN 프레임·신호 모델 |
 
-실습에 대응하는 원본 DBC는 백업에서 확인되지 않아 Import 모델을 보존했습니다. 제공 C 파일의 기존 작성자·권리 표기는 유지했습니다.
+CAN 프레임과 신호 구성은 `Configuration/System/DBImport/Project.arxml`에 정의되어 있습니다. [CAN 신호 설명](References/DB/README.md)에 송수신 구성을 정리했습니다. 제공 C 파일의 기존 작성자·권리 표기는 유지했습니다.

@@ -1,33 +1,33 @@
 # AUTOSAR RTE — Client/Server
 
-디지털 입력과 출력에 Client/Server 인터페이스를 연결하는 실습입니다. SeatSwitch는 IO 서비스를 호출해 입력을 읽고, SeatHeatingControl은 IO 서비스를 호출해 출력을 변경합니다.
+스위치 S1(PE0) 입력과 LED1(PE4) 출력에 Client/Server 인터페이스를 연결하는 실습입니다. SeatSwitch는 IO 서비스를 호출해 S1을 읽고, SeatHeatingControl은 IO 서비스를 호출해 LED1을 제어합니다. S1을 누르는 동안 LED1이 켜지고, 놓으면 꺼집니다.
 
 ## 인터페이스 구성
 
 | 연결 | 방식 | 역할 |
 |---|---|---|
-| SeatSwitch → IO 서비스 | Client/Server | 디지털 입력 읽기 |
+| SeatSwitch → IO 서비스 | Client/Server | S1(PE0) 입력 읽기 |
 | SeatSwitch → SeatHeatingControl | Sender/Receiver | `PassengerDetected` 값 전달 |
-| SeatHeatingControl → IO 서비스 | Client/Server | 디지털 출력 쓰기 |
+| SeatHeatingControl → IO 서비스 | Client/Server | LED1(PE4) 출력 쓰기 |
 
 Sender/Receiver는 데이터를 전달하고, Client/Server는 Operation을 호출하는 방식입니다.
 
 ## 동작 흐름
 
 ```text
-디지털 입력 → SeatSwitch → S/R 데이터 전달 → SeatHeatingControl → 디지털 출력
-               Rte_Call                          Rte_Call
+S1(PE0) → SeatSwitch → S/R 데이터 전달 → SeatHeatingControl → LED1(PE4)
+            Rte_Call                          Rte_Call
 ```
 
 - 입력: `Rte_Call_R_IO_ReadDirect(&Passenger)`
 - 데이터 전달: `Rte_Write/Read_*_PassengerDetected()`
 - 출력: `Rte_Call_R_HeatingElement_WriteDirect()`
 
-SeatSwitch는 100 ms Timing Event로 실행되고, SeatHeatingControl은 데이터 수신 Event로 실행됩니다.
+SeatSwitch는 100 ms Timing Event로 S1 입력을 읽고, SeatHeatingControl은 데이터 수신 Event로 실행됩니다. Composition에서 입력 포트는 `IoHwAbDigitalDirectLogical_S01`에, 출력 포트는 `IoHwAbDigitalDirectLogical_LED01`에 연결했습니다.
 
 ## 이전 실습과 달라진 점
 
-04의 0/1 생성 코드를 디지털 입력 읽기로 바꿨습니다. 출력 쪽도 `IoHwAb_DigDirWriteDirect()` 직접 호출에서 `Rte_Call_*` 호출로 변경했습니다. 두 SWC 사이의 Sender/Receiver 연결은 유지합니다.
+04의 0/1 생성 코드를 실제 S1 입력 읽기로 바꿨습니다. 출력 쪽도 `IoHwAb_DigDirWriteDirect()` 직접 호출에서 `Rte_Call_*` 호출로 변경했습니다. 두 SWC 사이의 Sender/Receiver 연결은 유지합니다.
 
 ## 주요 파일
 

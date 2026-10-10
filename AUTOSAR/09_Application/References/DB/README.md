@@ -1,15 +1,15 @@
-# CAN DB 입력과 실제 Import 모델
+# TORCS CAN 프레임·신호 구성
 
-이 실습의 CAN 설정은 [Configuration/System/DBImport/Project.arxml](../../Configuration/System/DBImport/Project.arxml)에 보존했습니다. 아래 표는 이 저장된 모델에서 확인한 실습 프레임입니다. 기본 플랫폼 프레임도 같은 모델 안에 함께 존재합니다.
+[Project.arxml](../../Configuration/System/DBImport/Project.arxml)의 CC·LKAS CAN 프레임입니다. 송수신 방향은 ECU 기준입니다.
 
-| 프레임 트리거 | CAN ID (16진수) | CAN ID (10진수) |
-|---|---|---|
-| `FT_LKAS_Send` | `0x7FE` | 2046 |
-| `FT_LKAS_Recv` | `0x7FC` | 2044 |
-| `FT_CC_Send` | `0x7FF` | 2047 |
-| `FT_CC_Recv2` | `0x7FD` | 2045 |
-| `FT_CC_Recv1` | `0x7EF` | 2031 |
+| 프레임 트리거 | CAN ID | 방향 | 주요 신호 |
+|---|---|---|---|
+| `FT_CC_Recv1` | `0x7EF` | 수신 | `ACCEL_VALUE`, `TARGET_SPEED` |
+| `FT_CC_Recv2` | `0x7FD` | 수신 | `SPEED`, `CC_TRIGGER` |
+| `FT_CC_Send` | `0x7FF` | 송신 | `BRAKE`, `ACCEL` |
+| `FT_LKAS_Recv` | `0x7FC` | 수신 | `STEER_VALUE`, `LKAS_TRIGGER` |
+| `FT_LKAS_Send` | `0x7FE` | 송신 | `LEFT_STEER`, `RIGHT_STEER` |
 
-원본 워크스페이스의 `References/DB/Project.dbc`는 이름이 같지만 기본 플랫폼 예제용이며 위 실습 프레임·신호가 없습니다. 실제 Import 결과와 다른 DBC를 원본 입력인 것처럼 게시하지 않도록 복사에서 제외했습니다.
+TORCS에서 받은 입력을 COM·RTE로 전달하고, 100 ms 주기의 CC·LKAS Runnable에서 처리한 출력을 CAN 신호로 송신합니다.
 
-백업에서 위 실습에 대응하는 별도의 원본 DBC는 확인되지 않았습니다. 강의의 DBC Import 과정은 모델로 확인할 수 있지만, 원본 DBC 자체까지 보존된 스냅샷은 아닙니다. 추측해서 새 DBC를 만들지 않았습니다.
+모델에는 기본 플랫폼 프레임과 실습 프레임이 함께 포함되어 있습니다. 원본 DBC 파일은 포함하지 않았습니다.

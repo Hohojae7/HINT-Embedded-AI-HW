@@ -1,6 +1,6 @@
 # AUTOSAR OS — 주기 Task
 
-Counter와 Alarm으로 Task를 주기적으로 활성화하는 실습입니다. LED 초기화가 끝난 뒤 `OsTask_Test_1s`가 1초 간격으로 실행되며 LED2 상태를 전환합니다.
+Counter와 Alarm으로 Task를 주기적으로 활성화하는 실습입니다. LED 초기화가 끝난 뒤 `OsTask_Test_1s`가 1초 간격으로 실행되며 LED2(PE5) 상태를 전환합니다.
 
 ## Task·Alarm 설정
 

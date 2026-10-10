@@ -43,4 +43,4 @@ extern uint8 RamBlock_N_Block1[10];
 | [구현 설명](Static_Code/Reference_Code/README.md) | RAM 선언과 제공 Runnable의 처리 흐름 |
 | [generate.py](Build/generate.py) | `App_NvM` 생성 입력 등록 |
 
-제공 C·헤더 전체는 배포 제한 표기 때문에 제외하고 설정과 구현 설명을 보존했습니다. 강의의 여러 블록 설정 예제 중, 이 저장본은 Native 블록 서비스 연동을 중심으로 정리했습니다.
+이 실습은 Native 블록의 설정과 NvM 서비스 연동을 다룹니다. 제공 C·헤더 전체는 배포 제한에 따라 포함하지 않았으며, RAM 선언과 Runnable의 처리 흐름은 [구현 설명](Static_Code/Reference_Code/README.md)에서 확인할 수 있습니다.
