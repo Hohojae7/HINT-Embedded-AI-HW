@@ -13,16 +13,6 @@ OS Task에서 시작해 SWC 간 통신, 하드웨어 입출력, CAN, 비휘발�
 | 플랫폼 | AUTOSAR Classic 교육용 프로젝트 |
 | 시뮬레이터 | TORCS (09 CC·LKAS 연동) |
 
-### 보드 핀 구성
-
-| 장치 | MCU 핀 | 사용 실습 |
-|---|---|---|
-| S1 | PE0 | 05 디지털 입력 |
-| LED1 | PE4 | 03~05 출력, 06~07 난방 동작 상태 |
-| LED2 | PE5 | 01~02 Task 동작, 06~07 Alive 표시 |
-| LED4 | PE7 | 06~07 난방 강도 (PWM) |
-| 가변저항 | PB4 | 06~07 난방 단계 입력 (ADC) |
-
 ## AUTOSAR 기본 구조
 
 AUTOSAR Classic은 Application, RTE, BSW 세 계층으로 나뉩니다. 각 계층 아래에 해당 실습 번호를 적었습니다.
