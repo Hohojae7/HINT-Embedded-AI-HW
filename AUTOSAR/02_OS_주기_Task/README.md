@@ -10,9 +10,9 @@ Counter와 Alarm으로 Task를 주기적으로 활성화하는 실습입니다. 
 | Activation / Priority | `1` / `2` |
 | Schedule | `FULL` — 선점 가능 |
 | Alarm | `OsAlarm_Test_1s` |
-| Counter | `OsCounter_0` |
+| Counter | `OsCounter_0` — STM 하드웨어 타이머 채널 0, 1 tick = 1 µs |
 | Autostart | `RELATIVE`, `OsAppMode0` |
-| 시작값 / 반복값 | `500000` / `1000000` ticks |
+| 시작값 / 반복값 | `500000` ticks = 0.5 s / `1000000` ticks = 1 s |
 | Alarm Action | `OsTask_Test_1s` 활성화 |
 
 ## 동작 흐름
@@ -27,6 +27,7 @@ Task는 `GblLedInit`가 참일 때 LED2 출력을 바꾸고 `TerminateTask()`로
 ## 이전 실습과 달라진 점
 
 01과 `App_Os.c`는 동일합니다. 이 단계에서 달라지는 핵심은 `Ecud_Os.arxml`의 주기 Task·Alarm 등록과 OS-Application 연결입니다.
+`OsTask_Test_1s`와 `OsAlarm_Test_1s`를 `OsApplication0`에 등록해, 두 OS 객체의 소유와 접근 권한을 관리하는 OS-Application을 지정합니다.
 
 ## 주요 파일
 

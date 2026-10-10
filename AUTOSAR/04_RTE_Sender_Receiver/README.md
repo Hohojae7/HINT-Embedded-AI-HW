@@ -25,6 +25,8 @@ SeatSwitch가 100 ms마다 만든 모의 승객 감지 값을 SeatHeatingControl
 | SeatSwitch Timing Event | `OsTask_ASW_FG1_100ms` |
 | SeatHeatingControl Data Received Event | `OsTask_BSW_AppModeRequest` |
 
+수신 Event는 강의의 Task Mapping 단계에서 지정한 기존 `OsTask_BSW_AppModeRequest`에 매핑했습니다.
+
 수신한 값이 참이면 `IOHWAB_HIGH`, 거짓이면 `IOHWAB_LOW`를 `IoHwAb_DigDirWriteDirect()`에 전달합니다. 0/1 값이 100 ms마다 바뀌면서 LED1이 자동으로 깜빡입니다.
 
 ## 이전 실습과 달라진 점

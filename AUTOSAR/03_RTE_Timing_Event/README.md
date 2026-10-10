@@ -10,8 +10,8 @@ SWC에 Runnable과 Timing Event를 만들고 OS Task에 매핑하는 실습입�
 | Runnable 함수 | `SeatSwitch()` |
 | Event | `TE_RE_SeatSwitch` |
 | 주기 | `0.1 s` = 100 ms |
-| 매핑 Task | `OsTask_ASW_FG1_100ms` |
-| 사용 Alarm | `OsAlarm_ASW_100ms` |
+| 매핑 Task | `OsTask_ASW_FG1_100ms` — 기존 플랫폼 Task |
+| 사용 Alarm | `OsAlarm_ASW_100ms` — 기존 플랫폼 Alarm |
 | 출력 | LED1, PE4 |
 
 Runnable은 SWC의 실행 단위이며, RTE는 설정된 Event와 OS Task 매핑에 따라 해당 함수를 실행합니다.
@@ -24,6 +24,10 @@ Runnable은 SWC의 실행 단위이며, RTE는 설정된 Event와 OS Task 매핑
 
 `SeatSwitch()`는 `IoHwAb_DigDirWriteDirect(0, Passenger)`로 현재 값을 출력한 뒤, 다음 실행에 사용할 `Passenger` 값을 0/1로 바꿉니다. 채널 `0`은 LED1(PE4)에 연결되어 있습니다. LED 상태는 100 ms마다 바뀌며, 켜짐과 꺼짐을 합친 반복 주기는 약 200 ms입니다.
 `Build/generate.py`의 GenerateRte 입력에는 새 모델인 `App_Rte`를 등록했습니다.
+
+## 이전 실습과 달라진 점
+
+02에서는 OS Task 내부에서 LED2를 직접 제어했습니다. 03에서는 SWC의 Timing Event와 Runnable을 기존 100 ms Task·Alarm에 매핑해 LED1을 제어합니다.
 
 ## 주요 파일
 

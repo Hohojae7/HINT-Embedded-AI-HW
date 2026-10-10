@@ -13,7 +13,8 @@ TORCS의 CAN 신호를 CC·LKAS SWC에 연결하는 실습입니다. 제공된 �
 
 ## CAN 신호 구성
 
-ECU 기준 수신·송신 방향입니다.
+`TORCS(제공 runtime) ↔ PCAN-USB ↔ TRK-MPC5606B`로 연결하며, CAN 통신 속도는 500 kbit/s입니다.
+TORCS 폴더에 제공 runtime을 설치하고 PCAN 연결 후 `execute.bat`를 관리자 권한으로 실행합니다. 아래 표는 ECU 기준 수신·송신 방향입니다.
 
 | 프레임 | CAN ID | 방향 | 주요 신호 |
 |---|---|---|---|
@@ -29,7 +30,8 @@ ECU 기준 수신·송신 방향입니다.
 TORCS CAN 입력 → COM·RTE → CC / LKAS Runnable → RTE·COM → TORCS CAN 출력
 ```
 
-- **CC**: 트리거와 속도 입력을 읽어 가속 출력값을 보정합니다. 제공 코드의 `BRAKE` 출력은 0으로 설정되어 있습니다.
+- **CC**: `CC_TRIGGER > 5000`일 때 입력 가속값을 기준으로, `SPEED*100 - TARGET_SPEED < -TARGET_SPEED*100`이면 +500, 그 외 `SPEED*100 > TARGET_SPEED`이면 −1000을 보정합니다.
+  비활성 시 `ACCEL=0`이며, 제공 코드의 `BRAKE` 출력은 항상 0입니다.
 - **LKAS**: 활성 트리거와 조향 입력의 부호에 따라 좌·우 출력값을 정하고, 출력 크기를 최대 10000으로 제한합니다.
 
 이 실습은 제공 제어 코드와 AUTOSAR 구성의 연결을 다룹니다.

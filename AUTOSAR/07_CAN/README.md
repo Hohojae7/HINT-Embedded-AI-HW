@@ -7,10 +7,12 @@ IoHwAb 실습에 CAN 승객 감지 신호를 추가한 실습입니다. 수신�
 | 항목 | 설정 |
 |---|---|
 | 통신 속도 | 500 kbit/s |
+| PC 송수신 환경 | PCAN-View + PCAN-USB, `0x005` 프레임을 생성해 송신 |
 | 수신 프레임 | `ECU2_Msg_PD`, ID `0x005` |
 | 송신 프레임 | `ECU1_Msg_SH`, ID `0x004` |
 | 수신 값 | `Sig1`: 0이면 승객 없음, 0이 아니면 승객 감지 |
 | 송신 값 | 수신한 `Sig1` 값을 상태 신호에 기록 |
+| 송신 방식 | `DIRECT` + `TRIGGERED_WITHOUT_REPETITION`, 최소 송신 간격 20 ms |
 
 ## 동작 흐름
 
@@ -19,6 +21,7 @@ CAN RX → COM·RTE → SeatSwitch → PassengerDetected → SHControl → PWM
                       └─ 수신 값 → CAN 상태 송신
 ```
 
+`0x004`는 `Re_SeatSwitch()`에서 수신 값을 `Rte_Write`로 갱신할 때 송신을 요청하며, 고정 주기 송신은 사용하지 않습니다.
 CAN 수신 Data Received Event로 `Re_SeatSwitch()`를 실행합니다. `Re_SHSwitch()`는 승객 상태를 읽고, 기존 다이얼 처리 Runnable은 이 상태에 따라 난방 단계 또는 0을 전달합니다. 두 수신 Event는 `OsTask_ASW_DRE`에 매핑되어 있습니다.
 
 | `0x005` 첫 바이트 | LED1(PE4) | LED4(PE7) | LED2(PE5) |
