@@ -43,6 +43,9 @@ TORCS CAN 입력 → COM·RTE → CC / LKAS Runnable → RTE·COM → TORCS CAN 
   else if (SPEED * 100 > TARGET_SPEED)                   ACCEL -= 1000;
   ```
 
+  > 첫 번째 조건은 `SPEED × 100 < −99 × TARGET_SPEED`와 같아서, 두 속도가 0 이상이면 성립하지 않습니다.
+  > 따라서 실제로는 현재 속도가 목표를 넘을 때 1000을 빼는 보정만 동작합니다. 코드는 강의 제공본을 그대로 사용했습니다.
+
 - **LKAS**: 활성 트리거와 조향 입력의 부호에 따라 좌·우 출력값을 정하고, 출력 크기를 최대 10000으로 제한합니다.
 
 이 실습은 제공 제어 코드와 AUTOSAR 구성의 연결을 다룹니다.
