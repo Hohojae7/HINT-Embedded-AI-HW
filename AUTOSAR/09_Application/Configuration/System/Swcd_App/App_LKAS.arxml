@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-3-0.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="0b1154e5-0877-46ee-b741-15675c2deebc">
+      <SHORT-NAME>ARRoot</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="dfc0b3b4-be88-4389-b853-c11531517fe3">
+          <SHORT-NAME>App_LKAS</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="f3f0bc54-e25c-45ca-bbe1-1236445c1dc7">
+              <SHORT-NAME>LKAS_Send</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/DBCImport/INTERFACES/LKAS_Send/RIGHT_STEER</DATA-ELEMENT-REF>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/DBCImport/COMPUMETHODS/ISignal_LKAS_Send_RIGHT_STEER</COMPU-METHOD-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                </NONQUEUED-SENDER-COM-SPEC>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/DBCImport/INTERFACES/LKAS_Send/LEFT_STEER</DATA-ELEMENT-REF>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/DBCImport/COMPUMETHODS/ISignal_LKAS_Send_LEFT_STEER</COMPU-METHOD-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/DBCImport/INTERFACES/LKAS_Send</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="3aaa397a-ddaa-442a-b1fb-38245de250b1">
+              <SHORT-NAME>LKAS_Recv</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/DBCImport/INTERFACES/LKAS_Recv/LKAS_TRIGGER</DATA-ELEMENT-REF>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/DBCImport/COMPUMETHODS/ISignal_LKAS_Recv_LKAS_TRIGGER</COMPU-METHOD-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/DBCImport/INTERFACES/LKAS_Recv/STEER_VALUE</DATA-ELEMENT-REF>
+                  <NETWORK-REPRESENTATION>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/DBCImport/COMPUMETHODS/ISignal_LKAS_Recv_STEER_VALUE</COMPU-METHOD-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </NETWORK-REPRESENTATION>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/DBCImport/INTERFACES/LKAS_Recv</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="ecbb4aa2-1378-4e13-8609-c1c45ee65b0d">
+              <SHORT-NAME>InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="6708af8f-c203-4832-b111-f71ccec4a470">
+                  <SHORT-NAME>TE_Runnable_LKAS</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ARRoot/App_LKAS/InternalBehavior/Runnable_LKAS</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="ff063914-2d0c-4cf7-a0db-0c252542fd64">
+                  <SHORT-NAME>Runnable_LKAS</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                    <VARIABLE-ACCESS UUID="3689415c-d272-4f78-b859-172f5e71301c">
+                      <SHORT-NAME>DRPBA_Runnable_LKAS_LKAS_Recv_LKAS_TRIGGER</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ARRoot/App_LKAS/LKAS_Recv</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/DBCImport/INTERFACES/LKAS_Recv/LKAS_TRIGGER</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                      <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="8d679ae5-0b9a-422c-9396-c4b9578fee8e">
+                      <SHORT-NAME>DRPBA_Runnable_LKAS_LKAS_Recv_STEER_VALUE</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ARRoot/App_LKAS/LKAS_Recv</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/DBCImport/INTERFACES/LKAS_Recv/STEER_VALUE</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                      <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                    </VARIABLE-ACCESS>
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="ca84ed2c-e493-471c-9533-3a251b421e54">
+                      <SHORT-NAME>DSP_Runnable_LKAS_LKAS_Send_RIGHT_STEER</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ARRoot/App_LKAS/LKAS_Send</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/DBCImport/INTERFACES/LKAS_Send/RIGHT_STEER</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                      <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="afae4ef5-f8a3-4f5b-89cb-c3cc8436cc51">
+                      <SHORT-NAME>DSP_Runnable_LKAS_LKAS_Send_LEFT_STEER</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ARRoot/App_LKAS/LKAS_Send</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/DBCImport/INTERFACES/LKAS_Send/LEFT_STEER</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                      <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
+                  <SYMBOL>Runnable_LKAS_100ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,29 @@
+# Workspace state and tool caches
+**/.metadata/
+**/.settings/
+**/.log/
+*.log
+**/RemoteLaunch/
+**/RemoteSystemsTempFiles/
+
+# Generated output and build artifacts
+**/Generated/
+**/Build/
+**/Debug/
+**/Release/
+**/Library/
+*.o
+*.obj
+*.elf
+*.map
+*.sconsign.dblite
+
+# IDE machine-specific files
+.project
+.cproject
+.pydevproject
+.cwGeneratedFileSetLog
+ReferencedRSESystems.xml
+
+# Keep selected practice code under Static_Code.
+

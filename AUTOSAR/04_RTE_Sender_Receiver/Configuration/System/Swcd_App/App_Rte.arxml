@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-3-0.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="6c666600-0886-4d2e-a2ad-41a32b522a07">
+      <SHORT-NAME>App_Rte</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="c7847652-6849-41d6-828d-cec8eed3b0c8">
+          <SHORT-NAME>SWC_SeatSwitch</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="c0406fe6-9071-4e10-b467-a92da681cb24">
+              <SHORT-NAME>P_SeatSwitch</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/App_Rte/If_SeatSwitch/PassengerDetected</DATA-ELEMENT-REF>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/App_Rte/If_SeatSwitch</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="4aae40db-8e7c-4e25-9703-24dfc4ef5a37">
+              <SHORT-NAME>InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="c0ecece3-5651-4aa4-b27d-5258b6000ce3">
+                  <SHORT-NAME>TE_RE_SeatSwitch</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/App_Rte/SWC_SeatSwitch/InternalBehavior/RE_SeatSwitch</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="a9f4bc34-c8a3-4a40-b25d-9473718e8a14">
+                  <SHORT-NAME>RE_SeatSwitch</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="3f1caee9-151e-4bf1-96a4-40801abc21cf">
+                      <SHORT-NAME>DSP_RE_SeatSwitch_P_SeatSwitch_PassengerDetected</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/App_Rte/SWC_SeatSwitch/P_SeatSwitch</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/App_Rte/If_SeatSwitch/PassengerDetected</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                      <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
+                  <SYMBOL>SeatSwitch</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <COMPOSITION-SW-COMPONENT-TYPE UUID="0dc7f41d-562c-4569-b528-409484fe38f4">
+          <SHORT-NAME>CSWC_SeatSystem</SHORT-NAME>
+          <COMPONENTS>
+            <SW-COMPONENT-PROTOTYPE UUID="c7c1bcfc-fb5e-4225-99fa-db5bdd1bf60e">
+              <SHORT-NAME>SWC_SeatSwitch</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/App_Rte/SWC_SeatSwitch</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="493ba254-b06e-41c5-968d-fa298b937624">
+              <SHORT-NAME>SWC_SeatHeatingControl</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/App_Rte/SWC_SeatHeatingControl</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+          </COMPONENTS>
+          <CONNECTORS>
+            <ASSEMBLY-SW-CONNECTOR UUID="228c8ab6-1573-4fe3-a042-52871c5059ee">
+              <SHORT-NAME>P_SeatSwitchOfSWC_SeatSwitchToR_SeatSwitchOfSWC_SeatHeatingControl</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/App_Rte/CSWC_SeatSystem/SWC_SeatSwitch</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/App_Rte/SWC_SeatSwitch/P_SeatSwitch</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/App_Rte/CSWC_SeatSystem/SWC_SeatHeatingControl</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_Rte/SWC_SeatHeatingControl/R_SeatSwitch</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+          </CONNECTORS>
+        </COMPOSITION-SW-COMPONENT-TYPE>
+        <SENDER-RECEIVER-INTERFACE UUID="16f8c185-8bc8-4bf7-8f01-44a45291f5bd">
+          <SHORT-NAME>If_SeatSwitch</SHORT-NAME>
+          <DATA-ELEMENTS>
+            <VARIABLE-DATA-PROTOTYPE UUID="d8cd81d6-50fd-44b5-a1e0-7a8d2182bca0">
+              <SHORT-NAME>PassengerDetected</SHORT-NAME>
+              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/boolean</TYPE-TREF>
+            </VARIABLE-DATA-PROTOTYPE>
+          </DATA-ELEMENTS>
+        </SENDER-RECEIVER-INTERFACE>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="0877a940-637e-4cc3-a9df-ec05201acbec">
+          <SHORT-NAME>SWC_SeatHeatingControl</SHORT-NAME>
+          <PORTS>
+            <R-PORT-PROTOTYPE UUID="4ce0c5f9-12f5-4572-9b51-13e0803fdaae">
+              <SHORT-NAME>R_SeatSwitch</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <NONQUEUED-RECEIVER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/App_Rte/If_SeatSwitch/PassengerDetected</DATA-ELEMENT-REF>
+                </NONQUEUED-RECEIVER-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/App_Rte/If_SeatSwitch</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="f4d5e4c2-9780-4751-945a-287018d5e632">
+              <SHORT-NAME>InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <DATA-RECEIVED-EVENT UUID="8d3fdf4e-7519-42c7-84e1-3b2acd456438">
+                  <SHORT-NAME>DRE_RE_SeatHeatingControl_R_SeatSwitch_PassengerDetected</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/App_Rte/SWC_SeatHeatingControl/InternalBehavior/RE_SeatHeatingControl</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_Rte/SWC_SeatHeatingControl/R_SeatSwitch</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/App_Rte/If_SeatSwitch/PassengerDetected</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="bd34b425-21c1-457e-a8b9-a42a23fdc962">
+                  <SHORT-NAME>RE_SeatHeatingControl</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                    <VARIABLE-ACCESS UUID="182c3f9f-3197-4e7a-bfa6-3bff523bd186">
+                      <SHORT-NAME>DRPBA_RE_SeatHeatingControl_R_SeatSwitch_PassengerDetected</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/App_Rte/SWC_SeatHeatingControl/R_SeatSwitch</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/App_Rte/If_SeatSwitch/PassengerDetected</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                      <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                    </VARIABLE-ACCESS>
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <SYMBOL>SeatHeatingControl</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

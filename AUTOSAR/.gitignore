@@ -1,0 +1,50 @@
+# Workspace / IDE state
+**/.metadata/
+**/.settings/
+**/.log/
+**/RemoteLaunch/
+**/RemoteSystemsTempFiles/
+.project
+.cproject
+.pydevproject
+.cwGeneratedFileSetLog
+ReferencedRSESystems.xml
+*.log
+**/__pycache__/
+*.pyc
+
+# Vendor definitions, implementations and binary libraries
+**/Configuration/Definition/
+**/Modules/
+**/Library/
+**/Debug/
+**/Release/
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.exe
+*.elf
+*.map
+*.bin
+*.srec
+*.s19
+*.s37
+*.pdb
+*.sconsign.dblite
+*.v2c
+*.c2v
+
+# Keep the lecture's modified generation input, not build outputs.
+**/Build/**
+!**/Build/
+!**/Build/generate.py
+
+# Keep only the service SWC models used in the exercises.
+**/Generated/**
+!**/Generated/
+!**/Generated/Bsw_Output/
+!**/Generated/Bsw_Output/swcd/
+!**/Generated/Bsw_Output/swcd/Swcd_IoHwAb.arxml
+!**/Generated/Bsw_Output/swcd/Swcd_Bsw_NvM.arxml
