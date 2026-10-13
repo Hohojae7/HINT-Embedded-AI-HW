@@ -7,7 +7,9 @@ modelName = 'raspberrypi_gettingstarted';
 logName = [modelName, '.log'];
 
 % Lab1의 raspi 객체와 구분: 배포된 모델 제어에는 raspberrypi를 사용
-r = raspberrypi('192.168.137.68', 'user', 'user');
+piPassword = getenv('RPI_PASSWORD');
+assert(~isempty(piPassword), 'Set RPI_PASSWORD before running this script.');
+r = raspberrypi('192.168.137.68', 'user', piPassword);
 
 %% 2. 모델 실행 여부 확인: 실행 중이면 true(1)
 isModelRunning(r, modelName)
