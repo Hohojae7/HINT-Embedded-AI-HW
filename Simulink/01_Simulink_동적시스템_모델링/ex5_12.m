@@ -15,7 +15,7 @@ for i = 1:length(C)
         c = C(i);
         k = K(j);
 
-        outdata(n) = sim("mck.slx");
+        outdata(n) = sim("ex5_12.slx");
 
         n = n + 1; % n++;
     end

@@ -32,7 +32,7 @@ tau = 0.5;
 
 % H(s)
 figure(1)
-H = tf([Kp_ACC Kd_ACC],[1 Kd_ACC Kp_ACC]);
+H = tf([Kd_ACC Kp_ACC],[1 Kd_ACC Kp_ACC]);
 bode(H); grid on
 
 % Vehicle Parameters

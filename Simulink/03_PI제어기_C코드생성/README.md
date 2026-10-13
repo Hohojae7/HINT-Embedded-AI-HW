@@ -20,7 +20,7 @@ u(t) = K_P\,e(t) + K_I\int_0^t e(\tau)\,d\tau
 
 | 파일 | 역할 |
 |---|---|
-| [`untitled (C코드 생성실습_PID제어기.c`](<untitled (C코드 생성실습_PID제어기.c>) | 모델 본체. `untitled_initialize()`, `untitled_step()`, `untitled_derivatives()` |
+| [`untitled.c`](untitled.c) | 모델 본체. `untitled_initialize()`, `untitled_step()`, `untitled_derivatives()` |
 | [`untitled.h`](untitled.h) | 신호(B), 연속 상태(X), 블록 상태(DW), 파라미터(P) 구조체와 함수 선언 |
 | [`untitled_data.c`](untitled_data.c) | 게인과 초기값 같은 파라미터 값 |
 | [`untitled_private.h`](untitled_private.h), [`untitled_types.h`](untitled_types.h) | 내부 매크로와 모델 타입 정의 |
