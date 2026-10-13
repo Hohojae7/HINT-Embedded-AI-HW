@@ -5,7 +5,7 @@
 | 파일 | 모델 | 웹캠 해상도 | 바꾼 점 |
 |---|---|---|---|
 | [`p87_pose_baseline.py`](p87_pose_baseline.py) | yolo11m-pose | 640×640 | 기준 코드 |
-| [`p89_pose_samll_frame.py`](p89_pose_samll_frame.py) | yolo11m-pose | 320×320 | 캡처 해상도를 낮춤 |
+| [`p89_pose_small_frame.py`](p89_pose_small_frame.py) | yolo11m-pose | 320×320 | 캡처 해상도를 낮춤 |
 | [`p90_pose_nano.py`](p90_pose_nano.py) | yolo11n-pose | 320×320 | 모델을 medium에서 nano로 교체 |
 | [`p91_pose_interval.py`](p91_pose_interval.py) | yolo11n-pose | 320×320 | 추론을 1초에 한 번만 실행 |
 

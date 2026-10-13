@@ -1,4 +1,4 @@
-%% Day4 p39-43: Simulink 내장 LED 모델 실행 제어
+%% p39-43: Simulink 내장 LED 모델 실행 제어
 
 %% 1. 실습 폴더와 Pi 연결
 labDir = fileparts(mfilename('fullpath'));
