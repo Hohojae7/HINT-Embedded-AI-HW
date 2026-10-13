@@ -1,0 +1,25 @@
+**** Starting the application ****
+Path = /home/user/projects/raspberrypi-labs/day4_matlab/resnet50_webcam/MATLAB_ws/R2026a/C/Users/User/Documents/Embedded_AI_MBD/day4_matlab/resnet50_simulink/
+Window title = SDL Video Display
+DISPLAY set to ':0.0'
+VIDIOC_QUERYCTRL: Invalid argument
+VIDIOC_QUERYCTRL: Invalid argument
+VIDIOC_QUERYCTRL: Invalid argument
+VIDIOC_QUERYCTRL: Invalid argument
+VIDIOC_QUERYCTRL: Invalid argument
+VIDIOC_QUERYCTRL: Invalid argument
+VIDIOC_QUERYCTRL: Invalid argument
+
+'Saturation' is not supported
+
+'Sharpness' is not supported
+
+'CameraPan' is not supported
+
+'CameraTilt' is not supported
+
+'CameraZoom' is not supported
+
+'EnableManualFocus' is not supported
+
+'ManualFocus' is not supported

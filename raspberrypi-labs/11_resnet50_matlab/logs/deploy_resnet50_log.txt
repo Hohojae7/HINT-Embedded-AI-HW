@@ -1,0 +1,9 @@
+
+p60_62_deploy_resnet50
+경고: 무한 루프 때문에 함수 'raspi_webcam_resnet'이(가) 종료되지 않습니다.
+
+
+경고 ==> <a href="matlab: emlcprivate('emcopentoline','C:\Users\User\Documents\Embedded_AI_MBD\day4_matlab\resnet50_webcam\raspi_webcam_resnet.m',59,1);">raspi_webcam_resnet 라인: 59 열: 1</a>
+코드 생성 성공(경고 포함): <a href="matlab: open('C:\Users\User\Documents\Embedded_AI_MBD\day4_matlab\resnet50_webcam\codegen\exe\raspi_webcam_resnet\html\report.mldatx');">리포트 보기</a>
+
+diary off
