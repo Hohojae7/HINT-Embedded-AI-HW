@@ -1,6 +1,6 @@
 # Raspberry Pi — 엣지 AI 실습
 
-HINT 교육과정의 Raspberry Pi 실습 자료입니다. Raspberry Pi 5에 USB 웹캠을 연결하고, 클라우드나 GPU 없이 보드 안에서 AI를 돌리는 방법을 두 갈래로 다뤘습니다.
+Raspberry Pi 5에 USB 웹캠을 연결하고, 클라우드나 GPU 없이 보드 안에서 AI를 돌리는 방법을 두 갈래로 다뤘습니다.
 
 - **Python**: Pi에서 YOLO로 객체 검출과 자세 추정을 하고, NPU 가속과 로컬 LLM까지 연결
 - **MATLAB·Simulink**: 노트북에서 알고리즘을 만들고, Pi를 원격으로 제어하거나 코드를 생성해 Pi에 배포
@@ -53,4 +53,4 @@ HINT 교육과정의 Raspberry Pi 실습 자료입니다. Raspberry Pi 5에 USB 
 ## 실행 전 준비
 
 - **Python**: 가상환경에 `pip install ultralytics`로 설치합니다. YOLO 모델 파일(`.pt`)은 레포에 넣지 않았고, 처음 실행할 때 자동으로 내려받습니다.
-- **MATLAB**: Raspberry Pi Blockset을 설치하고 `raspisetup`으로 Pi 설정을 마칩니다. 스크립트는 Pi 비밀번호를 환경변수에서 읽으므로 먼저 `setenv('RPI_PASSWORD', '비밀번호')`를 실행합니다. IP 주소와 사용자 이름은 실습 환경 값이라 바꿔서 사용합니다.
+- **MATLAB**: Raspberry Pi Blockset을 설치하고 `raspisetup`으로 Pi 설정을 마칩니다. 스크립트는 Pi 비밀번호를 환경변수에서 읽으므로 먼저 `setenv('RPI_PASSWORD', '비밀번호')`를 실행합니다.
