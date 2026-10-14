@@ -2,9 +2,9 @@
 
 # HINT 임베디드 AI HW 1기
 
-**YYYY.MM.DD – YYYY.MM.DD**
+**2026.07.27 – 2026.10.22**
 
-<img alt="HINT Embedded AI HW" src="assets/banner.png" width="100%"/>
+<img alt="HINT Embedded AI HW" src="https://github.com/user-attachments/assets/ba9d3cf9-1cff-4fae-8a37-d2f1c8bd22ed" width="100%"/>
 
 <br>
 
@@ -68,7 +68,7 @@ HINT-Embedded-AI-HW/
 ## Curriculum
 
 <a id="course-01"></a>
-### 01. MCU 프로그래밍 <sub>(YYYY.MM.DD – MM.DD)</sub>
+### 01. MCU 프로그래밍
 
 > Infineon AURIX TC275에서 HAL 없이 레지스터를 직접 설정해 GPIO, 인터럽트, 타이머, ADC를 다루는 bare-metal 펌웨어를 작성했습니다.
 
@@ -92,7 +92,7 @@ HINT-Embedded-AI-HW/
 </details>
 
 <a id="course-02"></a>
-### 02. 차량 통신 (CAN) <sub>(YYYY.MM.DD – MM.DD)</sub>
+### 02. 차량 통신 (CAN)
 
 > CAN 프레임 구조와 DBC를 익히고, Kvaser 가상 CAN 채널 위에서 python-can 스크립트로 가상 ECU를 만들어 메시지를 주고받았습니다.
 
@@ -114,7 +114,7 @@ HINT-Embedded-AI-HW/
 </details>
 
 <a id="course-03"></a>
-### 03. AUTOSAR <sub>(YYYY.MM.DD – MM.DD)</sub>
+### 03. AUTOSAR
 
 > AUTOSAR Classic의 Application, RTE, BSW 계층을 Mobilgene Studio로 구성하고, TRK-MPC5606B 보드에서 SWC와 BSW를 연결했습니다.
 
@@ -135,7 +135,7 @@ HINT-Embedded-AI-HW/
 </details>
 
 <a id="course-04"></a>
-### 04. 모델 기반 제어 <sub>(YYYY.MM.DD – MM.DD)</sub>
+### 04. 모델 기반 제어
 
 > MATLAB/Simulink로 동적 시스템과 차량 동역학을 모델링하고, 그 위에서 ABS·크루즈·ACC 제어기와 칼만 필터를 설계한 뒤 C 코드 생성과 Arduino 배포까지 진행했습니다.
 
@@ -155,7 +155,7 @@ HINT-Embedded-AI-HW/
 </details>
 
 <a id="course-05"></a>
-### 05. Raspberry Pi 엣지 AI <sub>(YYYY.MM.DD – MM.DD)</sub>
+### 05. Raspberry Pi 엣지 AI
 
 > Raspberry Pi 5와 USB 웹캠으로 YOLO 객체 검출·자세 추정, NPU 가속, 로컬 LLM을 다루고, MATLAB/Simulink에서 만든 알고리즘을 Pi에 배포했습니다.
 
@@ -174,7 +174,7 @@ HINT-Embedded-AI-HW/
 </details>
 
 <a id="course-06"></a>
-### 06. (과정명) <sub>(YYYY.MM.DD – MM.DD)</sub>
+### 06. (과정명)
 
 > (학습 내용 한두 줄)
 
