@@ -1,6 +1,6 @@
 # AURIX TC275 — MCU 프로그래밍 실습
 
-HINT 교육과정의 MCU 프로그래밍 실습 코드입니다. Infineon AURIX TC275의 CPU0에서 iLLD 레지스터 헤더(`Ifx*_reg.h`)로 주변장치를 직접 설정하는 bare-metal 방식으로 작성했습니다.
+Infineon AURIX TC275의 CPU0에서 iLLD 레지스터 헤더(`Ifx*_reg.h`)로 주변장치를 직접 설정하는 bare-metal 방식으로 작성했습니다.
 디지털 입출력에서 시작해 인터럽트·타이머, 아날로그 측정과 신호 처리까지 16개 실습을 순서대로 진행했습니다.
 
 ## 개발 환경
