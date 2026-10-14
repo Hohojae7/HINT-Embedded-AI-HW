@@ -30,12 +30,28 @@
 
 ```
 HINT-Embedded-AI-HW/
-├── AURIX_TC275/         # Lab01~16 실습 코드 + 공통 모듈(my_gpio, my_tick, my_adc …)
-├── AUTOSAR/             # 01~09 OS → RTE → IoHwAb → CAN → NvM → TORCS 연동
-├── python-can/          # 00~10 CAN 송수신 스크립트 + project.dbc
-├── Simulink/            # 01~09 동적 시스템 → 차량 동역학 → ABS·크루즈·ACC → 상태 추정 → Arduino
-├── raspberrypi-labs/    # 01~06 YOLO·NPU·로컬 LLM, 07~13 MATLAB/Simulink 배포
-└── assets/              # README 이미지
+├── AURIX_TC275/
+│   ├── Lab01 ~ Lab05      # GPIO: LED, 버튼, RGB
+│   ├── Lab06 ~ Lab10      # 인터럽트·타이머: STM, ERU, 1 ms tick, DHT11
+│   ├── Lab11 ~ Lab16      # 아날로그: VADC, DSADC, 필터
+│   └── my_*.c / my_*.h    # 공통 모듈 (gpio, tick, dht11, adc, scan, dsadc)
+├── python-can/
+│   ├── 00 ~ 02            # 기본 송수신
+│   ├── 03 ~ 07            # DBC 기반 주기 송신
+│   ├── 08 ~ 10            # 필터, 송수신 통합, 리모트 프레임
+│   └── project.dbc
+├── AUTOSAR/
+│   ├── 01 ~ 02            # OS: Task, Alarm
+│   ├── 03 ~ 05            # RTE: Timing Event, S/R, C/S
+│   └── 06 ~ 09            # BSW: IoHwAb, CAN, NvM → TORCS 통합
+├── Simulink/
+│   ├── 01 ~ 03            # 동적 시스템, Simscape, C 코드 생성
+│   ├── 04 ~ 07            # 종방향: 차량 모델, ABS, 크루즈, ACC
+│   ├── 08                 # 횡방향 모델, 칼만 필터
+│   └── 09                 # Arduino 배포
+└── raspberrypi-labs/
+    ├── 01 ~ 06            # Python: YOLO, Pose, NPU, LLM
+    └── 07 ~ 13            # MATLAB/Simulink: GPIO, UART, ResNet-50, 정지 표지판
 ```
 
 ## Course Navigation
