@@ -2,21 +2,41 @@
 
 # HINT 임베디드 AI HW 1기
 
-HMG Incubation of New Talent · Embedded AI HW, 1st Cohort<br>
 **YYYY.MM.DD – YYYY.MM.DD**
 
-![Language](https://img.shields.io/badge/Language-C%20%C2%B7%20Python%20%C2%B7%20MATLAB-1f425f?style=flat-square)
-![MCU](https://img.shields.io/badge/MCU-AURIX%20TC275%20%C2%B7%20MPC5606B-1f425f?style=flat-square)
-![Automotive](https://img.shields.io/badge/Automotive-AUTOSAR%20%C2%B7%20CAN-1f425f?style=flat-square)
-![Board](https://img.shields.io/badge/Board-Raspberry%20Pi%205%20%C2%B7%20Arduino%20Uno-1f425f?style=flat-square)
-
-</div>
+<img alt="HINT Embedded AI HW" src="assets/banner.png" width="100%"/>
 
 <br>
 
-현대자동차그룹 HINT(HMG Incubation of New Talent)의 임베디드 AI HW 과정은 차량용 임베디드 시스템을 MCU 펌웨어부터 차량 통신, AUTOSAR, 모델 기반 제어, 엣지 AI까지 실습 중심으로 다루는 3개월 과정입니다.
+<p>
+  <img alt="C" src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=white"/>
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+  <img alt="MATLAB" src="https://img.shields.io/badge/MATLAB-E16737?style=flat-square&logo=mathworks&logoColor=white"/>
+  <img alt="Simulink" src="https://img.shields.io/badge/Simulink-0076A8?style=flat-square&logo=mathworks&logoColor=white"/>
+  <img alt="AURIX TC275" src="https://img.shields.io/badge/AURIX_TC275-0A8276?style=flat-square&logo=infineon&logoColor=white"/>
+  <img alt="AUTOSAR" src="https://img.shields.io/badge/AUTOSAR-1C3F75?style=flat-square"/>
+  <img alt="CAN" src="https://img.shields.io/badge/CAN-6E3FA3?style=flat-square"/>
+  <img alt="Raspberry Pi" src="https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white"/>
+  <img alt="Arduino" src="https://img.shields.io/badge/Arduino-00878F?style=flat-square&logo=arduino&logoColor=white"/>
+</p>
 
-이 저장소는 과정 동안 수행한 실습 결과물을 정리한 것입니다. 흩어져 있던 실습 파일을 주제별 폴더로 다시 묶고, 폴더마다 README에 파일 구성과 동작, 실습하며 고친 점을 적었습니다.
+</div>
+
+현대자동차그룹 **HINT 임베디드 AI HW 1기** 과정에서 진행한 실습 결과물을 모아 둔 저장소입니다.
+<br/>
+분야별(MCU, AUTOSAR, CAN, 모델 기반 제어, 엣지 AI)로 폴더를 나누고, 폴더마다 README에 파일 구성과 동작을 정리했습니다.
+
+## 디렉토리 구조
+
+```
+HINT-Embedded-AI-HW/
+├── AURIX_TC275/         # Lab01~16 실습 코드 + 공통 모듈(my_gpio, my_tick, my_adc …)
+├── AUTOSAR/             # 01~09 OS → RTE → IoHwAb → CAN → NvM → TORCS 연동
+├── python-can/          # 00~10 CAN 송수신 스크립트 + project.dbc
+├── Simulink/            # 01~09 동적 시스템 → 차량 동역학 → ABS·크루즈·ACC → 상태 추정 → Arduino
+├── raspberrypi-labs/    # 01~06 YOLO·NPU·로컬 LLM, 07~13 MATLAB/Simulink 배포
+└── assets/              # README 이미지
+```
 
 ## Course Navigation
 
