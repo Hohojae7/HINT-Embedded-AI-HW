@@ -124,20 +124,24 @@ HINT-Embedded-AI-HW/
 
 **기초 용어**
 
-| 용어 | 설명 |
-| --- | --- |
-| Application | 차량의 기능과 제어 로직을 구현하는 응용 소프트웨어 계층 |
-| SWC | 입력 처리나 제어 등 특정 기능을 담당하는 소프트웨어 컴포넌트 |
-| VFB | 하드웨어 배치와 독립적으로 SWC 간 연결과 통신을 표현하는 개념 |
-| RTE | SWC 간 통신과 BSW 서비스 이용을 연결하는 계층 |
-| BSW | OS·통신·메모리·입출력 등 공통 기능을 제공하는 기반 소프트웨어 |
+<table>
+<tbody>
+<tr><td>Application</td><td>차량의 기능과 제어 로직을 구현하는 응용 소프트웨어 계층</td></tr>
+<tr><td>SWC</td><td>입력 처리나 제어 등 특정 기능을 담당하는 소프트웨어 컴포넌트</td></tr>
+<tr><td>VFB</td><td>하드웨어 배치와 독립적으로 SWC 간 연결과 통신을 표현하는 개념</td></tr>
+<tr><td>RTE</td><td>SWC 간 통신과 BSW 서비스 이용을 연결하는 계층</td></tr>
+<tr><td>BSW</td><td>OS·통신·메모리·입출력 등 공통 기능을 제공하는 기반 소프트웨어</td></tr>
+</tbody>
+</table>
 
 **구성요소**
 
-| 구분 | 구성요소 |
-| --- | --- |
-| VFB | Component, Composition, Port, Interface, Assembly/Delegation Connector |
-| RTE | Runnable, Event, Access Point |
+<table>
+<tbody>
+<tr><td>VFB</td><td>Component, Composition, Port, Interface, Assembly/Delegation Connector</td></tr>
+<tr><td>RTE</td><td>Runnable, Event, Access Point</td></tr>
+</tbody>
+</table>
 
 **실습 내용**
 
