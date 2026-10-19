@@ -86,9 +86,6 @@ HINT-Embedded-AI-HW/
 - **아날로그**: VADC 단발·tick trigger·scan 변환, ADC 결과 인터럽트와 ring buffer, DSADC
 - **신호 처리**: 이동평균, 3점 중앙값, 고정소수점 IIR 저역통과, 히스테리시스
 
-**실습하며 한 일**
-- 실습마다 복사해 쓰던 GPIO·tick·ADC 코드를 공통 모듈로 분리
-- 출력 핀을 입력 모드(IOCR `0x10`)로 설정하던 버그를 찾아 push-pull 출력(`0x80`)으로 수정
 
 </details>
 
@@ -108,9 +105,6 @@ HINT-Embedded-AI-HW/
 - **주기 송신**: DBC의 송신 주기 반영, 단일 루프 → 스레드 → `send_periodic()`
 - **수신**: ID·마스크 필터, 수신 스레드와 송신 스레드 동시 실행
 
-**실습하며 한 일**
-- 단일 루프 송신에서 주기가 누적되는 문제를 확인하고, 메시지마다 독립 주기로 보내도록 개선
-- 모든 스크립트에 종료 처리와 수신 timeout을 넣고, 만들기만 하던 `BitTiming`을 실제 버스 설정에 적용
 
 </details>
 
@@ -130,8 +124,6 @@ HINT-Embedded-AI-HW/
 - **BSW**: IoHwAb로 ADC·DIO·PWM 추상화, DBC import와 COM 신호, NvM 비동기 읽기·쓰기
 - **통합**: TORCS 시뮬레이터와 CAN으로 연동한 CC·LKAS SWC
 
-**실습하며 한 일**
-- 제공된 CC 로직의 조건식을 정리해, 실제로는 성립하지 않는 가속 보정 분기를 찾아 기록
 
 </details>
 
