@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="132" viewBox="0 0 680 132" role="img" aria-labelledby="title desc">
+  <title id="title">CPU의 명령어 처리 흐름</title>
+  <desc id="desc">메모리에서 명령어를 읽고, 수행할 동작을 해석한 뒤, 연산이나 데이터 이동을 실행합니다.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="680" height="132" rx="12" fill="#ffffff"/>
+  <g fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5">
+    <rect x="16" y="27" width="184" height="78" rx="10"/>
+    <rect x="248" y="27" width="184" height="78" rx="10"/>
+    <rect x="480" y="27" width="184" height="78" rx="10"/>
+  </g>
+  <g fill="none" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)">
+    <path d="M 208 66 H 239"/>
+    <path d="M 440 66 H 471"/>
+  </g>
+  <g font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" text-anchor="middle">
+    <g font-size="17" font-weight="700" fill="#0f172a">
+      <text x="108" y="59">명령어 읽기</text>
+      <text x="340" y="59">해석</text>
+      <text x="572" y="59">실행</text>
+    </g>
+    <g font-size="13" fill="#475569">
+      <text x="108" y="84">메모리에서 가져오기</text>
+      <text x="340" y="84">수행할 동작 확인</text>
+      <text x="572" y="84">연산·데이터 이동</text>
+    </g>
+  </g>
+</svg>
