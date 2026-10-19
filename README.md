@@ -122,11 +122,32 @@ HINT-Embedded-AI-HW/
 <summary><b>상세 학습 내용</b></summary>
 <br>
 
-- **OS**: Task 활성화·종료, Counter와 Alarm 기반 주기 Task
-- **VFB 구성요소**: Component, Composition, Port, Interface, Assembly/Delegation Connector
-- **RTE 구성요소**: Runnable, Event, Access Point
-- **BSW**: IoHwAb로 ADC·DIO·PWM 추상화, DBC import와 COM 신호, NvM 비동기 읽기·쓰기
-- **통합**: TORCS 시뮬레이터와 CAN으로 연동한 CC·LKAS SWC
+**기초 용어**
+
+| 용어 | 설명 |
+| --- | --- |
+| Application | 차량의 기능과 제어 로직을 구현하는 응용 소프트웨어 계층 |
+| SWC | 입력 처리나 제어 등 특정 기능을 담당하는 소프트웨어 컴포넌트 |
+| VFB | 하드웨어 배치와 독립적으로 SWC 간 연결과 통신을 표현하는 개념 |
+| RTE | SWC 간 통신과 BSW 서비스 이용을 연결하는 계층 |
+| BSW | OS·통신·메모리·입출력 등 공통 기능을 제공하는 기반 소프트웨어 |
+
+**구성요소**
+
+| 구분 | 구성요소 |
+| --- | --- |
+| VFB | Component, Composition, Port, Interface, Assembly/Delegation Connector |
+| RTE | Runnable, Event, Access Point |
+
+**실습 내용**
+
+- **OS 실습**: Task 활성화·종료, Counter와 Alarm을 이용한 주기 실행
+- **RTE 실습**: Runnable 주기 실행, Sender/Receiver 데이터 전달, Client/Server 기능 호출
+- **BSW 실습**
+  - **입출력**: IoHwAb를 이용한 ADC·DIO·PWM 연결
+  - **CAN 통신**: DBC 파일을 불러오고 COM 신호 연결
+  - **메모리**: NvM을 이용한 비휘발성 데이터 읽기·쓰기와 완료 통지
+- **통합 실습**: TORCS 시뮬레이터와 CAN으로 연동한 CC·LKAS SWC
 
 
 </details>
