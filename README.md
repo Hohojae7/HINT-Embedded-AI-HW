@@ -123,7 +123,8 @@ HINT-Embedded-AI-HW/
 <br>
 
 - **OS**: Task 활성화·종료, Counter와 Alarm 기반 주기 Task
-- **RTE**: SWC, Runnable, Timing Event, Sender/Receiver와 Client/Server 인터페이스
+- **VFB 구성요소**: Component, Composition, Port, Interface, Assembly/Delegation Connector
+- **RTE 구성요소**: Runnable, Event, Access Point
 - **BSW**: IoHwAb로 ADC·DIO·PWM 추상화, DBC import와 COM 신호, NvM 비동기 읽기·쓰기
 - **통합**: TORCS 시뮬레이터와 CAN으로 연동한 CC·LKAS SWC
 
